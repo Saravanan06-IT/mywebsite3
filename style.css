@@ -1,0 +1,570 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#ffffff;
+    color:#222;
+    overflow-x:hidden;
+    transition:0.4s;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark{
+    background:#111;
+    color:#f5f5f5;
+}
+
+body.dark section{
+    background:#111;
+}
+
+body.dark .menu-item,
+body.dark #cartSidebar,
+body.dark form,
+body.dark .review{
+    background:#1d1d1d;
+    color:#fff;
+}
+
+body.dark input{
+    background:#222;
+    color:#fff;
+    border:1px solid #444;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    backdrop-filter:blur(12px);
+    background:rgba(0,0,0,0.25);
+}
+
+.logo{
+    color:#fff;
+    font-size:2rem;
+    font-weight:700;
+    font-family:'Playfair Display',serif;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    color:#fff;
+    font-weight:500;
+}
+
+.nav-actions{
+    display:flex;
+    gap:15px;
+}
+
+.nav-actions button{
+    border:none;
+    cursor:pointer;
+    padding:10px;
+    border-radius:50%;
+    background:#ffffff20;
+    color:white;
+    font-size:18px;
+}
+
+.hamburger{
+    display:none;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero video{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.overlay{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:5rem;
+    font-family:'Playfair Display',serif;
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+}
+
+.primary-btn,
+.secondary-btn{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.primary-btn{
+    background:#C62828;
+    color:white;
+}
+
+.secondary-btn{
+    background:#FFB300;
+}
+
+.primary-btn:hover,
+.secondary-btn:hover{
+    transform:translateY(-4px);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:100px 0;
+}
+
+h2{
+    text-align:center;
+    font-size:3rem;
+    margin-bottom:50px;
+    font-family:'Playfair Display',serif;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    text-align:center;
+    padding:120px 0;
+}
+
+.about p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+}
+
+.gallery-grid img{
+    height:280px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.05);
+}
+
+/* =========================
+   FILTERS
+========================= */
+
+.filters{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.filter-btn{
+    padding:12px 24px;
+    margin:5px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    background:#eee;
+    transition:.3s;
+}
+
+.filter-btn.active{
+    background:#C62828;
+    color:white;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.menu-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.menu-item{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.menu-item:hover{
+    transform:translateY(-8px);
+}
+
+.menu-item img{
+    height:220px;
+    object-fit:cover;
+}
+
+.menu-item h3{
+    padding:15px 20px 5px;
+}
+
+.menu-item p{
+    padding:0 20px;
+}
+
+.menu-item span{
+    display:block;
+    padding:10px 20px;
+    color:#C62828;
+    font-weight:700;
+}
+
+.add-cart{
+    margin:20px;
+    width:calc(100% - 40px);
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    background:#C62828;
+    color:white;
+}
+
+/* =========================
+   CART
+========================= */
+
+#cartSidebar{
+    position:fixed;
+    right:-400px;
+    top:0;
+    width:380px;
+    height:100%;
+    background:white;
+    padding:30px;
+    z-index:9999;
+    transition:.4s;
+    overflow:auto;
+    box-shadow:-5px 0 25px rgba(0,0,0,.2);
+}
+
+#cartSidebar.active{
+    right:0;
+}
+
+#cartItems{
+    margin-top:20px;
+}
+
+.cart-item{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+}
+
+.cart-total{
+    font-size:1.3rem;
+    margin-top:30px;
+    font-weight:700;
+}
+
+#checkoutBtn{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    border:none;
+    background:#C62828;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+/* =========================
+   RESERVATION
+========================= */
+
+form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding:40px;
+    background:#fafafa;
+    border-radius:20px;
+}
+
+input{
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+}
+
+form button{
+    padding:15px;
+    border:none;
+    background:#C62828;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.review-slider{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+}
+
+.review{
+    display:none;
+    padding:40px;
+    background:#fafafa;
+    border-radius:20px;
+}
+
+.review.active{
+    display:block;
+}
+
+.review p{
+    margin:20px 0;
+    font-size:1.1rem;
+}
+
+/* =========================
+   INSTAGRAM
+========================= */
+
+.instagram-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.instagram-grid img{
+    height:250px;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* =========================
+   MAP
+========================= */
+
+.map-container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.map-container iframe{
+    width:100%;
+    height:500px;
+    border:none;
+    border-radius:20px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact{
+    text-align:center;
+}
+
+.hours{
+    margin-top:30px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero-content,
+.menu-item,
+.gallery-grid img{
+    animation:fadeIn 1s ease;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+.hero h1{
+    font-size:3.5rem;
+}
+
+}
+
+@media(max-width:768px){
+
+.nav-links{
+    display:none;
+}
+
+.hamburger{
+    display:block;
+}
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+#cartSidebar{
+    width:100%;
+}
+
+h2{
+    font-size:2.2rem;
+}
+
+form{
+    padding:20px;
+}
+
+.gallery-grid,
+.menu-grid,
+.instagram-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero h1{
+    font-size:2rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+.logo{
+    font-size:1.5rem;
+}
+
+}

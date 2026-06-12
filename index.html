@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SRI VIDHIYA RESTURANT</title>
+
+<meta name="description"
+content="Experience premium dining with handcrafted dishes, online reservations, and food delivery.">
+
+<meta name="keywords"
+content="restaurant, food, dining, reservations, online ordering">
+
+<meta name="theme-color" content="#C62828">
+
+<link rel="manifest" href="manifest.json">
+
+<link
+href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Restaurant Schema -->
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Restaurant",
+ "name":"SRI VIDHIYA RESTURANT",
+ "image":"images/restaurant.jpg",
+ "telephone":"+91 9876543210",
+ "servesCuisine":"Indian",
+ "priceRange":"₹200-₹500",
+ "address":{
+   "@type":"631209",
+   "streetAddress":"1/1009,reddiyar street,tiruttani,tiruvallurdistrict",
+   "addressLocality":"tiruttani",
+   "addressCountry":"India"
+ }
+}
+</script>
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<div class="logo">
+SRI VIDHIYA RESTURANT
+</div>
+
+<nav class="nav-links">
+
+<a href="#home">Home</a>
+<a href="#gallery">Gallery</a>
+<a href="#menu">Menu</a>
+<a href="#reservation">Reservation</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="nav-actions">
+
+<button id="themeToggle">
+🌙
+</button>
+
+<button id="cartBtn">
+🛒
+<span id="cartCount">0</span>
+</button>
+
+<button class="hamburger">
+☰
+</button>
+
+</div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section id="home" class="hero">
+
+<video autoplay muted loop playsinline>
+<source
+src="https://cdn.coverr.co/videos/coverr-cooking-steak-1564325973498?download=1080p"
+type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>
+Authentic Flavors.<br>
+Memorable Experiences.
+</h1>
+
+<p>
+Fresh ingredients, handcrafted recipes,
+and unforgettable dining moments.
+</p>
+
+<div class="hero-buttons">
+
+<button class="primary-btn">
+Reserve Table
+</button>
+
+<button class="secondary-btn">
+Order Online
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about">
+
+<div class="container">
+
+<h2>Welcome to SRI VIDHIYA RESTURANT</h2>
+
+<p>
+Where culinary artistry meets hospitality.
+Every dish is prepared using premium ingredients,
+bringing authentic taste and unforgettable memories.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+
+<section id="gallery">
+
+<div class="container">
+
+<h2>Food Gallery</h2>
+
+<div class="gallery-grid">
+
+<img src="images/gallery-1.jpg" alt="Gallery image 1">
+<img src="images/gallery-2.jpg" alt="Gallery image 2">
+<img src="images/gallery-3.jpg" alt="Gallery image 3">
+<img src="images/gallery-4.jpg" alt="Gallery image 4">
+<img src="images/gallery-5.jpg" alt="Gallery image 5">
+<img src="images/gallery-6.jpg" alt="Gallery image 6">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= MENU ================= -->
+
+<section id="menu">
+
+<div class="container">
+
+<h2>Our Menu</h2>
+
+<div class="filters">
+
+<button class="filter-btn active"
+data-filter="all">
+All
+</button>
+
+<button class="filter-btn"
+data-filter="starters">
+Starters
+</button>
+
+<button class="filter-btn"
+data-filter="main">
+Main Course
+</button>
+
+<button class="filter-btn"
+data-filter="dessert">
+Desserts
+</button>
+
+<button class="filter-btn"
+data-filter="drinks">
+Drinks
+</button>
+
+</div>
+
+<div class="menu-grid">
+
+<div class="menu-item starters">
+
+<img src="images/menu-bruschetta.jpg" alt="Bruschetta">
+
+<h3>Bruschetta</h3>
+
+<p>Fresh tomatoes & herbs.</p>
+
+<span>₹299</span>
+
+<button class="add-cart"
+data-name="Bruschetta"
+data-price="299">
+Add to Cart
+</button>
+
+</div>
+
+<div class="menu-item main">
+
+<img src="images/menu-salmon.jpg" alt="Grilled Salmon">
+
+<h3>Grilled Salmon</h3>
+
+<p>Atlantic salmon with vegetables.</p>
+
+<span>₹799</span>
+
+<button class="add-cart"
+data-name="Grilled Salmon"
+data-price="799">
+Add to Cart
+</button>
+
+</div>
+
+<div class="menu-item dessert">
+
+<img src="images/menu-lavacake.jpg" alt="Lava Cake">
+
+<h3>Lava Cake</h3>
+
+<p>Warm chocolate center.</p>
+
+<span>₹249</span>
+
+<button class="add-cart"
+data-name="Lava Cake"
+data-price="249">
+Add to Cart
+</button>
+
+</div>
+
+<div class="menu-item drinks">
+
+<img src="images/menu-mojito.jpg" alt="Fresh Mojito">
+
+<h3>Fresh Mojito</h3>
+
+<p>Mint & lime cooler.</p>
+
+<span>₹199</span>
+
+<button class="add-cart"
+data-name="Fresh Mojito"
+data-price="199">
+Add to Cart
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CART ================= -->
+
+<aside id="cartSidebar">
+
+<h2>Your Cart</h2>
+
+<div id="cartItems"></div>
+
+<div class="cart-total">
+
+Total:
+₹<span id="totalPrice">0</span>
+
+</div>
+
+<button id="checkoutBtn">
+Proceed to Checkout
+</button>
+
+</aside>
+
+<!-- ================= RESERVATION ================= -->
+
+<section id="reservation">
+
+<div class="container">
+
+<h2>Reserve a Table</h2>
+
+<form id="reservationForm">
+
+<input
+type="text"
+placeholder="Full Name"
+required>
+
+<input
+type="email"
+placeholder="Email"
+required>
+
+<input
+type="date"
+required>
+
+<input
+type="time"
+required>
+
+<input
+type="number"
+placeholder="Guests"
+required>
+
+<button type="submit">
+Reserve Now
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ================= REVIEWS ================= -->
+
+<section id="reviews">
+
+<div class="container">
+
+<h2>Guest Reviews</h2>
+
+<div class="review-slider">
+
+<div class="review active">
+
+★★★★★
+
+<p>
+Amazing food and excellent service.
+</p>
+
+<h4>- Sarah M.</h4>
+
+</div>
+
+<div class="review">
+
+★★★★★
+
+<p>
+One of the best dining experiences.
+</p>
+
+<h4>- David K.</h4>
+
+</div>
+
+<div class="review">
+
+★★★★★
+
+<p>
+Absolutely loved the ambiance.
+</p>
+
+<h4>- Priya R.</h4>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= INSTAGRAM ================= -->
+
+<section id="instagram">
+
+<div class="container">
+
+<h2>Instagram Feed</h2>
+
+<div class="instagram-grid">
+
+<img src="images/gallery-4.jpg" alt="Instagram image 1">
+<img src="images/gallery-2.jpg" alt="Instagram image 2">
+<img src="images/gallery-3.jpg" alt="Instagram image 3">
+<img src="images/gallery-5.jpg" alt="Instagram image 4">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= MAP ================= -->
+
+<section id="location">
+
+<h2>Find Us</h2>
+
+<div class="map-container">
+
+<iframe
+src="https://www.google.com/maps?q=tiruttani&t=&z=13&ie=UTF8&iwloc=&output=embed"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<h2>Contact Us</h2>
+
+<p>📍 1/1009, Reddiyar Street, Tiruttani, Tiruvallur District</p>
+
+<p>📞 +91 9876543210</p>
+
+<p>✉️ hello@srividhiyarestaurant.com</p>
+
+<div class="hours">
+
+<h3>Opening Hours</h3>
+
+<p>Mon–Thu: 11 AM – 10 PM</p>
+<p>Fri–Sat: 11 AM – 11 PM</p>
+<p>Sunday: 12 PM – 10 PM</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+© 2026 SRI VIDHIYA RESTURANT.
+All Rights Reserved.
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
